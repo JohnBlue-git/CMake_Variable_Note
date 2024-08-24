@@ -1,4 +1,4 @@
-# CMake_Variable_Project
+# CMake_Variable
 To build the project, follow these steps:
 
 Navigate to the root of the project

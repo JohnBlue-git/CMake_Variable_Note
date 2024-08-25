@@ -29,8 +29,11 @@ Source directory means the root of the project and it is where CMakeLists.txt lo
 ```console
 # We can use -S to set source directory
 #        use -B to set binary directory
-# To clear binary derectory (or cmake cache) before re-build, we can uuse --fresh
+# (New in cmake version 3.24) To clear binary derectory (or cmake cache) before re-build, we can uuse --fresh
 cmake -S <source-dir> -B <binary-dir> --fresh
+
+# ref:
+# https://cmake.org/cmake/help/latest/manual/cmake.1.html
 ```
 - CMAKE_CXX_COMPILER: \
 Path to the C++ compiler.

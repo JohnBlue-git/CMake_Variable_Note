@@ -1,3 +1,17 @@
+
+<details>
+<summary>Click to expand code</summary>
+
+```console
+def hello_world():
+    print("Hello, world!")
+
+function helloWorld() {
+    console.log("Hello, world!");
+}
+```
+</details>
+
 # CMake_Variable
 To build the project, follow these steps:
 

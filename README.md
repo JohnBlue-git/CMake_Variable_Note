@@ -64,11 +64,26 @@ set(SELECT_APP "APP1")
     These variables' value will be remember accross the project and affect future CMake configurations (if CMake cache exist). The values set by user defined or under the top-level directory would overshadow the valuse set under the sud-directories. 
 ```cmake
 # How to set cache variable via user input
-# cmake -D <name>:<type>=<value>
+# cmake -D <name>:<type>=<value> ..
 
 # How to set cache variable within CMakeLists.txt
 set(CACHE_SELECT_APP "APP1" CACHE STRING "")
 
 # Priority:
 # user input > top-level set() > sub-level set()
+```
+
+## CMake options
+Provide a boolean option that the user can optionally select
+```cmake
+# How to set options
+# cmake -DBUILD_APP1=OFF ..
+
+# Define options
+option(BUILD_APP1 "Build APP1" OFF)
+
+# Include examples if the option is enabled
+if(BUILD_APP1)
+    add_subdirectory(APP1)
+endif()
 ```

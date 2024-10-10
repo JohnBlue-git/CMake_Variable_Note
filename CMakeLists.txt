@@ -25,3 +25,19 @@ elseif(CACHE_SELECT_APP STREQUAL "APP2")
 else()
     message(STATUS "[Sub-dir] Error: ${CACHE_SELECT_APP} does not exist")
 endif()
+
+
+### Use option variable
+
+# Define options
+option(BUILD_APP1 "Build APP1" OFF)
+option(BUILD_APP2 "Build APP2" OFF)
+
+# Include examples if the option is enabled
+if(BUILD_APP1)
+    add_subdirectory(APP1)
+endif()
+if(BUILD_APP2)
+    add_subdirectory(APP2)
+endif()
+
